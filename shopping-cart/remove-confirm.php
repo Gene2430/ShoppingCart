@@ -3,10 +3,10 @@
     require_once('dataset.php');
 
     if(isset($_POST['btnProcess'])) {
-      
+
         unset($_SESSION['cartItems'][$_POST['hdnKey']][$_POST['hdnSize']]);
 
-        
+       
         $_SESSION['totalQuantity'] -= $_POST['hdnQuantity'];
         header("location: cart.php");
     }
